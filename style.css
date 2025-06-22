@@ -1,0 +1,85 @@
+body{
+    background-color: pink;
+}
+.text{
+    width: 45ch;
+    font-family: monospace;
+    text-wrap: nowrap;
+    overflow: hidden;
+    margin: 100px;
+    animation: typing 3s steps(45) infinite alternate-reverse;
+    color: red;
+    font-size: 36px;
+}
+@keyframes typing {
+    from{
+        width: 0;
+    }
+}
+.one{
+    position:relative;
+    left: 130px;
+    top: 100px;
+}
+.main{
+    position: relative;
+    left: 30%;
+}
+.btns{
+    position: relative;
+    left: 12%;
+    bottom: 70px;
+    word-spacing: 20px;
+}
+.yes{
+    padding: 10px;
+    height: 50px;
+    width: 80px;
+    background: forestgreen;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.no{
+    padding: 10px;
+    height: 50px;
+    width: 80px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* ✅ Responsive styles for mobile devices */
+@media(max-width:600px) {
+    .text {
+        font-size: 24px;
+        width: 30ch;
+        margin: 40px 20px;
+        animation: typing 3s steps(30) infinite alternate-reverse;
+    }
+    .main {
+        left: 10%;
+    }
+    .one {
+        left: 20px;
+        top: 40px;
+        width: 200px; /* Optional: scale image for small screen */
+    }
+    .btns {
+        left: 0;
+        bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        word-spacing: normal;
+    }
+    .yes, .no {
+        width: 100px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
